@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
+  <ItemDiff>
+    <FormDialog Icon="Applications/16x16/window_view.png" Header="Database Compare" Text="Compare the same item in different databases. The differences are highlighted." CancelButton="false">
+      <CodeBeside Type="SitecoreExtensions.SitecoreItemDiff.Dialogs.ItemDBCompare.ItemsCompareDiff,SitecoreExtensions.SitecoreItemDiff"/>
+      <link href="/sitecore/shell/Applications/Dialogs/ItemDiff/ItemDBDiff.css" rel="stylesheet"/>
+      <Stylesheet>
+        .ie #GridContainer {
+        padding: 4px;
+        }
+
+        .ff #GridContainer &gt; * {
+        padding: 4px;
+        }
+
+        .ff .scToolbutton, .ff .scToolbutton_Down, .ff .scToolbutton_Hover, .ff .scToolbutton_Down_Hover {
+        height: 20px;
+        float: left;
+        }
+
+        .scToolbar {
+        display: none;
+        }
+        
+      </Stylesheet>
+      <Script Src="/sitecore/shell/Applications/Dialogs/ItemDiff/ItemDBDiff.js"> </Script>
+      <AutoToolbar DataSource="/sitecore/content/Applications/Dialogs/Diff/Toolbar" def:placeholder="Toolbar"/>
+
+      <Groupbox Header="Item compare filters">
+        <GridPanel Columns="6">
+          <Label For="DatabaseMasterDropdown" Width="15%" GridPanel.Style="width: 10%;padding:0px 4px 4px 0px">Database 1:  </Label>
+          <Combobox ID="DatabaseMasterDropdown" Width="50%" GridPanel.Width="25%" GridPanel.Style="padding:0px 4px 4px 0px" Change="#"/>
+          <Label For="DatabaseWebDropdown" Width="15%" GridPanel.Style="width: 10%;padding:0px 4px 4px 0px">Database 2:  </Label>
+          <Combobox ID="DatabaseWebDropdown" Width="50%" GridPanel.Width="25%" GridPanel.Style="padding:0px 4px 4px 0px" Change="#"/>
+          <Label For="LanguageDropDown" Width="15%" GridPanel.Style="width: 10%;padding:0px 4px 4px 0px">Language:  </Label>
+          <Combobox ID="LanguageDropDown" Width="100%" GridPanel.Width="25%" GridPanel.Style="padding:0px 4px 4px 0px" Change="#"/>
+
+        </GridPanel>
+      </Groupbox>
+      <GridPanel Columns="3" Width="100%" Height="100%" GridPanel.Height="100%">
+        <Scrollbox ID="GridContainer" Padding="" Background="white" GridPanel.ColSpan="3" GridPanel.Height="100%">
+          <GridPanel ID="Grid" Width="100%" CellPadding="0" Fixed="true"></GridPanel>
+        </Scrollbox>
+      </GridPanel>
+    </FormDialog>
+  </ItemDiff>
+</control>
