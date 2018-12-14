@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <control xmlns:def="Definition" xmlns="http://schemas.sitecore.net/Visual-Studio-Intellisense">
   <ItemDiff>
-    <FormDialog Icon="Applications/16x16/window_view.png" Header="Database Compare" Text="Compare the same item in different databases. The differences are highlighted." CancelButton="false">
+    <FormDialog Icon="Applications/16x16/window_view.png" Header="Item Database Compare" Text="Compare the item among databases and differences are highlighted." CancelButton="false">
       <CodeBeside Type="SitecoreExtensions.SitecoreItemDiff.Dialogs.ItemDBCompare.ItemsCompareDiff,SitecoreExtensions.SitecoreItemDiff"/>
       <link href="/sitecore/shell/Applications/Dialogs/ItemDiff/ItemDBDiff.css" rel="stylesheet"/>
       <Stylesheet>
